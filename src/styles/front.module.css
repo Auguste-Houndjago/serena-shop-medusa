@@ -1,0 +1,346 @@
+
+
+.prodInfo{
+    
+    background-color: blueviolet;
+}
+
+@keyframes blink {
+    0% {opacity: 1; color: rgba(255, 255, 0, 0.771);}
+    25% {opacity: 0.5;color: rgba(255, 0, 89, 0.771);}
+    50% {opacity: 0.5;color: rgba(51, 64, 163, 0.771);}
+    80% {opacity: 0.5;color: rgba(255, 255, 255, 0.771);}
+    100% {opacity: 1;}
+  }
+  
+  .acount_welcom{
+    @apply uppercase mb-6;
+    animation: blink 10s linear ease-in-out infinite ;
+    animation-delay: 3min;
+    font-size: 30px;
+    
+
+  }
+
+
+  .welcom_user{
+    font-size: 1.4em;
+    font-weight: 1000;
+    text-align: center;
+    word-spacing: 4px;
+    line-height: 2.2rem;
+
+
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #ff1361 10%,
+      #fff800 20%,
+      #44107a 29%,
+      #ff1361 67%
+      /* #fff800 100% */
+    );
+    /* background-size: auto auto; */
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 3s linear infinite;
+    display: inline-block;
+    
+  }
+  
+
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+
+    from{
+      background-position: 100% center;
+    }
+  }
+
+
+  .acount_welcom:hover{
+    color: rgba(0, 0, 0, 0.416);
+    cursor: pointer;
+  }
+
+
+  @keyframes colorchange {
+    0% {box-shadow: 0 0 15px 2px #5107ffb6;}
+    10% {box-shadow: 0 0 15px 2px #6108fc81;}
+    20% {box-shadow: 0 0 15px 2px #7309fd9f;}
+    30% {box-shadow: 0 0 15px 2px #830afc81;}
+    40% {box-shadow: 0 0 15px 2px #951bfb;}
+    50% {box-shadow: 0 0 15px 2px #a62cfa;}
+    60% {box-shadow: 0 0 15px 2px #b73df96e;}
+    70% {box-shadow: 0 0 15px 2px #c84ef87c;}
+    80% {box-shadow: 0 0 15px 2px #d95ff7;}
+    90% {box-shadow: 0 0 15px 2px #eb70f645;}
+    100% {box-shadow: 0 0 15px 2px transparent;}
+  }
+  
+  .span_input {
+    border-radius: 10px;
+    animation: colorchange 5s linear 1;
+    animation-delay: 5min;
+
+  }
+  
+
+  .name{
+    cursor: pointer;
+
+    color: rgba(9, 9, 9, 0.64);
+    background-image: url("../../public/images/outerspace.gif");
+    background-clip: text;
+    /* background-size: 100%; */
+    font-size: 1.5em;
+    background-position: 60% 20%;
+    
+
+  
+
+
+  }
+
+
+  .x:hover{
+    @apply font-thin;
+    filter: blur(20%);
+    
+    opacity: 0.5;
+   
+  }
+
+  .menu{
+
+    display: flex;
+    padding: 25%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+    /* backdrop-filter: blur(10px); */
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    /* background-color:transparent; */
+
+    background: transparent;
+    /* background-image: url(../../public/images/menu_bg.jpg); */
+    background-size: cover;
+    border: 2px solid rgb(0, 0, 0);
+    z-index: 1;
+    /* mix-blend-mode: luminosity; */
+    animation: menu_windows 5s ease-out infinite;
+    opacity: 1;
+ 
+   
+    
+  }
+
+  @keyframes menu_windows {
+    to {
+      mix-blend-mode: luminosity;
+    }
+
+    from{
+      mix-blend-mode: normal;
+    }
+  }
+
+
+  .menu::before{
+    content: '';
+    top: 50px; /* Ajustez la distance pour simuler l'épaisseur */
+    left: -5px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    border: 2px solid rgb(255, 255, 255);
+    z-index: -1;
+    transform: translateZ(-5px);
+    width: 68%;
+    height: 73%;
+    position: absolute;
+    /* display: none; */
+  }
+
+
+  /* .menu::after{
+    background-color:transparent;
+
+    background-size: cover;
+    opacity: 0.8;
+    z-index: 4;
+   
+
+  } */
+
+  .item{
+    border-radius: 5px;
+    padding-inline: 2px;
+    opacity: 1;
+    color: #000;
+    z-index: 10;
+    justify-content: center;
+    transition: 1.5s;
+    transition: background-position-x 5s;
+
+
+    /* background-color: transparent; */
+  }
+
+  .item:hover{
+    box-shadow: 0 0 20px 2px rgb(243, 241, 246);
+    background-color: rgba(0, 0, 0, 0.648);
+    width: 100%;
+    color: rgb(238, 238, 224);
+    opacity: 1;
+  
+   
+
+  }
+
+
+
+  .menu_container {
+
+    position: absolute;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:2;
+    top: 40%;
+    pointer-events: none;
+    perspective: 1000px;
+    
+  }
+  
+  .menu_ring {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 4px solid transparent;
+    border-top: 4px solid #24ecff55;
+    border-radius: 50%;
+    margin: -30px;
+    filter: drop-shadow(0 0 10px #24ecff) drop-shadow(0 0 30px #24ecff)
+      drop-shadow(0 0 50px #24ecff);
+    animation: animate 8s ease-in-out alternate-reverse infinite;
+    
+  }
+  
+  @keyframes animate {
+
+
+    to{
+
+      transform: rotate(0deg);
+
+    }
+
+    from{
+      transform: rotate(60deg);
+    }
+
+
+  }
+  
+  .menu_ring::before {
+    /* content: "\f005"; */
+    position: absolute;
+    top: 10px;
+    right: -4px;
+    rotate: 90deg;
+    font-family: fontAwesome;
+    color: #24ecff;
+    font-size: 2em;
+  }
+
+
+
+  
+  .menu_ring:nth-child(2) {
+    border: 4px solid transparent;
+    border-left: 4px solid #93ff2d;
+    filter: drop-shadow(0 0 10px #93ff2d) drop-shadow(0 0 30px #93ff2d)
+      drop-shadow(0 0 50px #93ff2d);
+    animation: animate2 4s linear infinite;
+    animation-delay: -1s;
+  }
+  
+  .menu_ring:nth-child(2)::before { 
+    /* content: "\f072"; */
+    top: initial;
+    bottom: -6px;
+    left: 12px;
+    right: initial;
+    rotate: 45deg;
+    color: #93ff2d;
+  }
+  
+  @keyframes animate2 {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .menu_ring:nth-child(3) {
+    position: absolute;
+    top: -66.66px;
+    border: 4px solid transparent;
+    border-left: 4px solid #ff1d6c55;
+    filter: drop-shadow(0 0 10px #ff1d6c) drop-shadow(0 0 30px #ff1d6c)
+      drop-shadow(0 0 50px #ff1d6c);
+    animation: animate2 4s linear infinite;
+    animation-delay: -3s;
+  }
+  
+  .menu_ring:nth-child(3)::before {
+    /* content: "\e518"; */
+    rotate: 135deg;
+    top: initial;
+    right: initial;
+    bottom: -6px;
+    left: 12px;
+    color: #ff1d6c;
+  }
+
+  .menu_container .menu_icon{
+    border: 1px black;
+    animation: icon 10s ease-in-out alternate-reverse infinite;
+    position: absolute;
+
+    /* transform: translateX(50px) */
+  }
+
+
+
+
+  @keyframes icon {
+    
+    to{
+
+      transform: rotate(0deg);
+
+    }
+
+    from{
+      transform: rotate(60deg);
+    }
+
+  }
+
+  /* .item:nth-child(1){
+    opacity: 1;
+    
+  } */

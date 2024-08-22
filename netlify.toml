@@ -1,0 +1,2 @@
+[template.environment]
+NEXT_PUBLIC_MEDUSA_BACKEND_URL="shop_e"
